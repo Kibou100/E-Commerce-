@@ -1,0 +1,390 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Spartan', sans-serif;
+    background-color:black;
+}
+h1 {
+    font-size: 70px;
+    line-height: 64px;
+    color: rgb(230, 230, 236);
+}
+
+h2 {
+    font-size: 70px;
+    line-height: 65px;
+    color: whitesmoke;
+
+}
+h4{
+    font-size: 35px;
+    color:White smoke;
+
+}
+h6{
+font-weight: 700
+
+}
+.fa-solid fa-cart-shopping{
+    font-size: 300px;
+
+}
+
+p{
+    font-size:16px;
+    color:White smoke;
+    margin:15px 0 20px 0;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    z-index:999;
+    
+    top:0;
+    left: 0;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.10);
+}
+@keyframes fly-down-navbar {
+    from {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fly-down-navbar 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+#navbar{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+#navbar li{
+    list-style:none;
+    padding:0px 20px;
+    position:relative;
+    top:0;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s ease;
+
+}
+#navbar li a:hover, #navbar li a.active{
+    color: rgb(242, 223, 116);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width:30%;
+    height:3px;
+    background:gold;
+    position:absolute;
+    bottom:-3px;
+    left:35%;
+}
+
+#feature .fe-box {
+    width:100%;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border:1px solid rgb(165, 150, 150)
+
+}
+
+#hero {
+    background-image: url("Whisk_226b50326e.jpg");
+    height:90vh;
+    width:100%;
+    background-size: cover;
+    padding:0 80px;
+    align-items: flex-start;
+   justify-content: center;
+    flex-direction: column;
+    display: flex;
+    background-position: top 20% right -300px;
+    animation: fly-in-bg 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+
+
+}
+
+
+#hero button {
+    background-image: url("button.png");
+    background-color: transparent;
+    color: White;
+    border: 0;
+    padding: 24px 120px 24px 105px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* Entrance animation */
+    animation: shopnow-pop 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both, fly-in-bg 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    transition: 
+        color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s,
+        padding 0.3s,
+        font-size 0.3s;
+}
+@keyframes fly-in-bg {
+    from {
+        background-position: top 20% right -900px;
+        opacity: 0;
+    }
+    to {
+        background-position: top 20% right -300px;
+        opacity: 1;
+    }
+}
+
+#hero h4 {
+    padding-bottom:15px;
+
+
+}
+
+#hero h1{
+    color: gold;
+}
+#hero button:hover{
+    color: goldenrod;
+    cursor: pointer;
+
+}
+.section-p1 {
+    padding:40px 80px
+}
+
+#feature .fe-box {
+    width:180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border:1px solid #0a0b0a;
+    border-radius: 3px;
+    background-color: rgb(17, 17, 17);
+    margin: 15px 0;
+}
+
+#feature .fe-box :hover {
+   box-shadow: 10px 10px 54px grey;
+   cursor: pointer;
+   
+}
+#feature .fe-box h5 {
+display: inline block;
+ padding:9px 8px 6px 8px;
+ line-height: 1;
+ border-radius: 4px;
+ color:gold;
+ background-color:black;
+}
+
+#feature .fe-box img {
+width: 100%;
+margin-bottom: 10px;
+}
+
+#feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#product1 {
+    margin-top: 40px;
+   text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    
+    
+
+}
+#product1 .pro-container{
+cursor: pointer;
+ border-radius: 25px;
+ margin: 15px 0;
+ box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+ transition: 0.2s ease;
+}
+
+
+#product1 .pro-container:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+.pro{
+    width: 30%;
+    height:80px;
+    border-radius: 10px;
+}
+
+@keyframes fly-in-text {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-text {
+    animation: fly-in-text 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes logo-rotate-once {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+.logo {
+    transition: transform 0.5s;
+    animation: logo-rotate-once 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Infinite rotation on hover */
+.logo:hover {
+    animation: logo-rotate-infinite 1.8s linear infinite;
+}
+
+@keyframes logo-rotate-infinite {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+.pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color:white;
+}
+
+
+
+#product1 .pro img {
+    transition: 
+        filter 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+        box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.pro-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+  gap: 32px;
+  max-width: 700px;
+  margin: 40px auto;
+  justify-items: center;
+}
+
+.pro {
+  background: #222;
+  border-radius: 14px;
+  padding: 18px;
+  width: 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.18), 0 1.5px 8px 0 rgba(255,255,255,0.10);
+  transition: box-shadow 0.3s;
+}
+
+.pro:hover {
+  box-shadow: 0 12px 40px 0 rgba(255, 215, 0, 0.28), 0 2px 12px 0 rgba(255,255,255,0.15);
+}
+
+.pro img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#hero button {
+    background-image: url("button.png");
+    background-color: transparent;
+    color: White;
+    border: 0;
+    padding: 24px 120px 24px 105px; /* Even larger size */
+    font-size: 30px;                /* Larger text */
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* Entrance animation */
+    animation: shopnow-pop 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both, fly-in-bg 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    transition: 
+        color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s,
+        padding 0.3s,
+        font-size 0.3s;
+}
+
+#hero button:hover {
+    color: gold;
+    background: black;
+    box-shadow: 0 0 20px 5px gold, 0 0 40px 10px #fff2;
+}
+
+#hero button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.2) 100%);
+    pointer-events: none;
+    animation: shine 1s linear;
+}
+
+@keyframes shine {
+    from { background-position: -200px; }
+    to   { background-position: 200px; }
+}
+
+@keyframes shopnow-pop {
+    0% {
+        transform: scale(0.7) rotate(-8deg);
+        opacity: 0;
+        filter: blur(6px);
+    }
+    60% {
+        transform: scale(1.08) rotate(2deg);
+        opacity: 1;
+        filter: blur(0);
+    }
+    80% {
+        transform: scale(0.96) rotate(-1deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}

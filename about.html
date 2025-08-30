@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(120deg, #060606 0%, #484646 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bg-move 10s ease-in-out infinite alternate;
+        }
+        @keyframes bg-move {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .about-container {
+            background: rgba(255,255,255,0.96);
+            padding: 48px 36px 36px 36px;
+            border-radius: 24px;
+            box-shadow: 0 12px 48px 0 rgba(255, 152, 0, 0.18), 0 2px 12px 0 rgba(255,215,0,0.10);
+            max-width: 540px;
+            width: 95%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: pop-in 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        @keyframes pop-in {
+            0% {
+                transform: scale(0.8) translateY(60px);
+                opacity: 0;
+                filter: blur(8px);
+            }
+            80% {
+                transform: scale(1.05) translateY(-8px);
+                opacity: 1;
+                filter: blur(0);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+        .about-container::before {
+            content: "";
+            position: absolute;
+            top: -60px; left: -60px;
+            width: 160px; height: 160px;
+            background: radial-gradient(circle, #fcb69f 60%, transparent 100%);
+            opacity: 0.22;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .about-container::after {
+            content: "";
+            position: absolute;
+            bottom: -60px; right: -60px;
+            width: 160px; height: 160px;
+            background: radial-gradient(circle, #f6d365 60%, transparent 100%);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+        h2 {
+            color: #ff9800;
+            font-size: 2.1rem;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 16px #fcb69f44;
+            transition: color 0.3s;
+        }
+        h2:hover {
+            color: #f6d365;
+            cursor: pointer;
+            text-shadow: 0 4px 24px #fcb69f;
+        }
+        .about-text {
+            color: #444;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+        }
+        .about-emoji {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            display: block;
+            animation: float 2.5s ease-in-out infinite alternate;
+            filter: drop-shadow(0 2px 8px #fcb69f88);
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-8deg);}
+            100% { transform: translateY(18px) rotate(8deg);}
+        }
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 28px 8px 24px 8px;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .about-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <span class="about-emoji">👨‍💻👨‍💻</span>
+        <h2>We are Arman and Bivaan, Students at Deerwalk College</h2>
+        <div class="about-text">
+            and this happens to be our first collaborative project together but we got bored and left it at this which is still cool
+        </div>
+    </div>
+</body>
